@@ -14,7 +14,7 @@ const roadmaps: Record<string, Roadmap> = {
       { title: "Databases (SQL/NoSQL)", description: "Learn how to store and manage your application's data." },
     ],
   },
-  "ai-ml": {
+  "aiml": {
     id: "ai-ml",
     name: "AI/ML",
     steps: [
@@ -36,7 +36,7 @@ const roadmaps: Record<string, Roadmap> = {
         { title: "Compete on Platforms", description: "Regularly solve problems on LeetCode, HackerRank, or Codeforces." },
     ],
   },
-   "ui-ux": {
+   "uiux": {
     id: "ui-ux",
     name: "UI/UX Design",
     steps: [
