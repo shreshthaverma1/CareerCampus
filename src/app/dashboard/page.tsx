@@ -9,6 +9,7 @@ import { Logo } from "@/components/logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Lightbulb } from "lucide-react";
+import Image from 'next/image';
 
 type DashboardPageProps = {
   searchParams: {
@@ -41,6 +42,19 @@ export default async function DashboardPage({ searchParams }: DashboardPageProps
 
   const resources = await getResources();
 
+  // Helper to determine the AI hint based on the roadmap name
+  const getAiHint = (roadmapName: string | undefined) => {
+    switch(roadmapName) {
+      case "Web Development": return "web development";
+      case "AI/ML": return "artificial intelligence";
+      case "Data Structures & Algorithms": return "data structures";
+      case "UI/UX Design": return "user interface";
+      case "Cloud Computing": return "cloud computing";
+      case "Data Science": return "data science";
+      default: return "technology";
+    }
+  }
+
   return (
     <main className="min-h-screen bg-background text-foreground p-4 md:p-8">
       <div className="max-w-5xl mx-auto space-y-12">
@@ -53,11 +67,32 @@ export default async function DashboardPage({ searchParams }: DashboardPageProps
         </header>
 
         <section id="roadmap">
-          <h3 className="text-2xl font-bold mb-4">Your Recommended Roadmap: <span className="text-primary">{roadmap?.name}</span></h3>
           {roadmap ? (
-            <Roadmap roadmap={roadmap} />
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="md:order-2">
+                 <h3 className="text-2xl font-bold mb-4">Your Recommended Roadmap: <span className="text-primary">{roadmap.name}</span></h3>
+                <Roadmap roadmap={roadmap} />
+              </div>
+              <div className="md:order-1">
+                <Image 
+                  src={roadmap.imageUrl} 
+                  alt={`${roadmap.name} Illustration`}
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-lg object-cover w-full h-auto"
+                  data-ai-hint={getAiHint(roadmap.name)}
+                />
+              </div>
+            </div>
           ) : (
-            <p>No roadmap found for your selected interest. We are working on it!</p>
+             <Card>
+                <CardHeader>
+                  <CardTitle>Your Recommended Roadmap</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>No roadmap found for your selected interest. We are working on it!</p>
+                </CardContent>
+              </Card>
           )}
         </section>
 
