@@ -69,11 +69,11 @@ export default async function DashboardPage({ searchParams }: DashboardPageProps
         <section id="roadmap">
           {roadmap ? (
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="md:order-2">
+              <div>
                  <h3 className="text-2xl font-bold mb-4">Your Recommended Roadmap: <span className="text-primary">{roadmap.name}</span></h3>
                 <Roadmap roadmap={roadmap} />
               </div>
-              <div className="md:order-1">
+              <div >
                 <Image 
                   src={roadmap.imageUrl} 
                   alt={`${roadmap.name} Illustration`}
