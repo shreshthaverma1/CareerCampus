@@ -58,6 +58,17 @@ const roadmaps: Record<string, Roadmap> = {
         { title: "Get Certified", description: "Aim for a foundational certification like AWS Certified Cloud Practitioner." },
     ],
   },
+  "data-science": {
+    id: "data-science",
+    name: "Data Science",
+    steps: [
+        { title: "Statistics & Probability", description: "Build a strong foundation in statistical concepts and probability theory." },
+        { title: "Python with Pandas & NumPy", description: "Master data manipulation, cleaning, and analysis using Python libraries." },
+        { title: "Data Visualization", description: "Learn to create insightful charts and graphs using Matplotlib and Seaborn." },
+        { title: "SQL for Data Analysis", description: "Become proficient in querying and extracting data from relational databases." },
+        { title: "Machine Learning for Analysts", description: "Understand and apply models like regression and classification to business problems." },
+    ],
+  },
 };
 
 const hackathons: Hackathon[] = [
@@ -68,6 +79,7 @@ const hackathons: Hackathon[] = [
   { id: "5", name: "Code Sprint", deadline: new Date("2024-09-25"), domain: "DSA", applyLink: "#" },
   { id: "6", name: "Devs for Change", deadline: new Date("2024-11-10"), domain: "Web Dev", applyLink: "#" },
   { id: "7", name: "ML Olympiad", deadline: new Date("2024-12-01"), domain: "AI/ML", applyLink: "#" },
+  { id: "8", name: "Data Dive 2024", deadline: new Date("2024-11-20"), domain: "Data Science", applyLink: "#" },
 ];
 
 let resources: Resource[] = [

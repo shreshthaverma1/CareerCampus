@@ -1,4 +1,3 @@
-// use server'
 'use server';
 
 /**
@@ -15,7 +14,7 @@ import {z} from 'genkit';
 const RecommendRoadmapInputSchema = z.object({
   interest: z
     .string()
-    .describe("The user's selected interest (DSA, Web Dev, AI/ML, UI/UX, Cloud)."),
+    .describe("The user's selected interest (DSA, Web Dev, AI/ML, UI/UX, Cloud, Data Science)."),
 });
 export type RecommendRoadmapInput = z.infer<typeof RecommendRoadmapInputSchema>;
 

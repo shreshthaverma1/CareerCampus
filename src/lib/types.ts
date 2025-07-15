@@ -1,6 +1,6 @@
-export type Interest = "DSA" | "Web Dev" | "AI/ML" | "UI/UX" | "Cloud";
+export type Interest = "DSA" | "Web Dev" | "AI/ML" | "UI/UX" | "Cloud" | "Data Science";
 
-export const interests: Interest[] = ["DSA", "Web Dev", "AI/ML", "UI/UX", "Cloud"];
+export const interests: Interest[] = ["DSA", "Web Dev", "AI/ML", "UI/UX", "Cloud", "Data Science"];
 
 export type Roadmap = {
   id: string;

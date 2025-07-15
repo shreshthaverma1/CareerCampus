@@ -13,7 +13,7 @@ import {z} from 'genkit';
 const SuggestHackathonsInputSchema = z.object({
   interests: z
     .array(z.string())
-    .describe('The user selected interests (DSA, Web Dev, AI/ML, UI/UX, Cloud).'),
+    .describe('The user selected interests (DSA, Web Dev, AI/ML, UI/UX, Cloud, Data Science).'),
 });
 export type SuggestHackathonsInput = z.infer<typeof SuggestHackathonsInputSchema>;
 
