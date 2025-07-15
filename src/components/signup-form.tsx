@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -34,17 +34,17 @@ export function SignUpForm() {
             <Input id="name" name="name" placeholder="Ada Lovelace" required />
           </div>
           <div className="space-y-3">
-            <Label>Your Interests</Label>
-            <div className="grid grid-cols-2 gap-4">
+            <Label>Your Interest</Label>
+            <RadioGroup name="interest" required className="grid grid-cols-2 gap-4">
               {interests.map((interest) => (
                 <div key={interest} className="flex items-center gap-2">
-                  <Checkbox id={interest} name={interest} value={interest} />
+                  <RadioGroupItem value={interest} id={interest} />
                   <Label htmlFor={interest} className="font-normal">
                     {interest}
                   </Label>
                 </div>
               ))}
-            </div>
+            </RadioGroup>
           </div>
         </CardContent>
         <CardFooter>

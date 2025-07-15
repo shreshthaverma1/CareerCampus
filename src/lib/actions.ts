@@ -8,14 +8,14 @@ import { revalidatePath } from "next/cache";
 
 const signUpSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
-  interests: z.array(z.string()).min(1, "Please select at least one interest."),
+  interest: z.string().min(1, "Please select at least one interest."),
 });
 
 export async function signUpAction(formData: FormData) {
   const name = formData.get("name") as string;
-  const selectedInterests = interests.filter((interest) => formData.get(interest));
+  const interest = formData.get("interest") as string;
   
-  const result = signUpSchema.safeParse({ name, interests: selectedInterests });
+  const result = signUpSchema.safeParse({ name, interest });
 
   if (!result.success) {
     // Handle validation errors - in a real app, you'd return this to the form
@@ -23,11 +23,11 @@ export async function signUpAction(formData: FormData) {
     return;
   }
   
-  await addUser(result.data);
+  await addUser({ name: result.data.name, interests: [result.data.interest] });
 
   const params = new URLSearchParams();
   params.set("name", result.data.name);
-  params.set("interests", result.data.interests.join(","));
+  params.set("interests", result.data.interest);
   
   redirect(`/dashboard?${params.toString()}`);
 }
