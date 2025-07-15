@@ -72,14 +72,14 @@ const roadmaps: Record<string, Roadmap> = {
 };
 
 const hackathons: Hackathon[] = [
-  { id: "1", name: "Hack The Web 2024", deadline: new Date("2024-10-15"), domain: "Web Dev", applyLink: "#" },
-  { id: "2", name: "AI Global Challenge", deadline: new Date("2024-11-01"), domain: "AI/ML", applyLink: "#" },
-  { id: "3", name: "Designathon '24", deadline: new Date("2024-09-30"), domain: "UI/UX", applyLink: "#" },
-  { id: "4", name: "Future Cloud Conf", deadline: new Date("2024-10-22"), domain: "Cloud", applyLink: "#" },
-  { id: "5", name: "Code Sprint", deadline: new Date("2024-09-25"), domain: "DSA", applyLink: "#" },
-  { id: "6", name: "Devs for Change", deadline: new Date("2024-11-10"), domain: "Web Dev", applyLink: "#" },
-  { id: "7", name: "ML Olympiad", deadline: new Date("2024-12-01"), domain: "AI/ML", applyLink: "#" },
-  { id: "8", name: "Data Dive 2024", deadline: new Date("2024-11-20"), domain: "Data Science", applyLink: "#" },
+  { id: "1", name: "Hack The Web 2024", deadline: new Date("2024-12-15"), domain: "Web Dev", applyLink: "#" },
+  { id: "2", name: "AI Global Challenge", deadline: new Date("2025-01-01"), domain: "AI/ML", applyLink: "#" },
+  { id: "3", name: "Designathon '24", deadline: new Date("2024-11-30"), domain: "UI/UX", applyLink: "#" },
+  { id: "4", name: "Future Cloud Conf", deadline: new Date("2024-12-22"), domain: "Cloud", applyLink: "#" },
+  { id: "5", name: "Code Sprint", deadline: new Date("2024-11-25"), domain: "DSA", applyLink: "#" },
+  { id: "6", name: "Devs for Change", deadline: new Date("2025-01-10"), domain: "Web Dev", applyLink: "#" },
+  { id: "7", name: "ML Olympiad", deadline: new Date("2025-02-01"), domain: "AI/ML", applyLink: "#" },
+  { id: "8", name: "Data Dive 2024", deadline: new Date("2024-12-20"), domain: "Data Science", applyLink: "#" },
 ];
 
 let resources: Resource[] = [
@@ -103,7 +103,12 @@ export async function getRoadmapByInterest(interest: Interest): Promise<Roadmap 
 
 export async function getHackathonsByDomains(domains: Interest[]): Promise<Hackathon[]> {
     const lowerCaseDomains = domains.map(d => d.toLowerCase());
-    const filtered = hackathons.filter(h => lowerCaseDomains.includes(h.domain.toLowerCase()));
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set to start of day for comparison
+
+    const filtered = hackathons.filter(h => 
+        lowerCaseDomains.includes(h.domain.toLowerCase()) && h.deadline >= today
+    );
     return Promise.resolve(filtered);
 }
 
