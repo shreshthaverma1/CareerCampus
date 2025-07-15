@@ -49,8 +49,8 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 240 6% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 181 100% 50%; /* Electric Blue */
-    --primary-foreground: 240 6% 4%;
+    --primary: 217 91% 60%; /* Medium Blue */
+    --primary-foreground: 0 0% 98%;
     --secondary: 240 4% 12%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 4% 12%;
@@ -61,7 +61,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 240 4% 15%;
     --input: 240 4% 10%;
-    --ring: 181 100% 50%;
+    --ring: 217 91% 60%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
