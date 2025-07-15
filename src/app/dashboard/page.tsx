@@ -62,7 +62,7 @@ export default async function DashboardPage({ searchParams }: DashboardPageProps
         </section>
 
         <section id="hackathons">
-          <h3 className="text-2xl font-bold mb-4">🔥 Hackathons You Might Like</h3>
+          <h3 className="text-2xl font-bold mb-4">Hackathons You Might Like</h3>
           <div className="space-y-8">
             <HackathonList title="Based on Your Interests" hackathons={interestHackathons} />
             <HackathonList title="Expand Your Horizons" hackathons={suggestedHackathons} icon={<Lightbulb className="w-5 h-5 text-primary" />} />
