@@ -5,7 +5,6 @@ export const interests: Interest[] = ["DSA", "Web Dev", "AI/ML", "UI/UX", "Cloud
 export type Roadmap = {
   id: string;
   name: string;
-  imageUrl: string;
   steps: { title: string; description: string }[];
 };
 

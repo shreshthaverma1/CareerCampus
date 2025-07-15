@@ -6,7 +6,6 @@ const roadmaps: Record<string, Roadmap> = {
   "web-dev": {
     id: "web-dev",
     name: "Web Development",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
       { title: "HTML & CSS", description: "Learn the fundamental building blocks of web pages." },
       { title: "JavaScript", description: "Master the language of the web to create interactive experiences." },
@@ -18,7 +17,6 @@ const roadmaps: Record<string, Roadmap> = {
   "aiml": {
     id: "ai-ml",
     name: "AI/ML",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
       { title: "Python Programming", description: "The core language for AI and Machine Learning." },
       { title: "Data Science Libraries", description: "Learn NumPy, Pandas, and Matplotlib for data manipulation and visualization." },
@@ -30,7 +28,6 @@ const roadmaps: Record<string, Roadmap> = {
   "dsa": {
     id: "dsa",
     name: "Data Structures & Algorithms",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
         { title: "Pick a Language", description: "Master C++, Java, or Python for competitive programming." },
         { title: "Learn Time & Space Complexity", description: "Understand how to analyze the efficiency of your algorithms." },
@@ -42,7 +39,6 @@ const roadmaps: Record<string, Roadmap> = {
    "uiux": {
     id: "ui-ux",
     name: "UI/UX Design",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
         { title: "Learn Design Principles", description: "Study concepts like color theory, typography, and visual hierarchy." },
         { title: "Master a Design Tool", description: "Become proficient in Figma, Sketch, or Adobe XD." },
@@ -54,7 +50,6 @@ const roadmaps: Record<string, Roadmap> = {
    "cloud": {
     id: "cloud",
     name: "Cloud Computing",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
         { title: "Fundamentals of Networking", description: "Understand IP addresses, DNS, and basic network protocols." },
         { title: "Choose a Cloud Provider", description: "Get started with AWS, Google Cloud, or Microsoft Azure." },
@@ -66,7 +61,6 @@ const roadmaps: Record<string, Roadmap> = {
   "data-science": {
     id: "data-science",
     name: "Data Science",
-    imageUrl: "https://placehold.co/600x400.png",
     steps: [
         { title: "Statistics & Probability", description: "Build a strong foundation in statistical concepts and probability theory." },
         { title: "Python with Pandas & NumPy", description: "Master data manipulation, cleaning, and analysis using Python libraries." },
