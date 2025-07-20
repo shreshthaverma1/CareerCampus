@@ -45,19 +45,7 @@ To run this project locally, follow these steps:
     ```
 
 ## Folder Structure
-
-career-campus/
-├── public/                 # Static assets
-├── src/
-│   ├── assets/             # Images and icons
-│   ├── components/         # Reusable UI components
-│   ├── pages/              # Application pages
-│   ├── App.js              # Main application component
-│   └── index.js            # Entry point
-├── tailwind.config.js      # Tailwind CSS configuration
-├── postcss.config.js       # PostCSS configuration
-├── package.json            # Project metadata and dependencies
-└── README.md               # Project documentation
+<img width="717" height="391" alt="image" src="https://github.com/user-attachments/assets/9fb6da52-4733-47ea-8fe6-53a942ee0349" />
 
 ## Deployment
 This project is deployed using Vercel. Any changes pushed to the main branch will automatically trigger a deployment.
