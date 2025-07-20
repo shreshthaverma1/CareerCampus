@@ -50,6 +50,9 @@ To run this project locally, follow these steps:
 ## Deployment
 This project is deployed using Vercel. Any changes pushed to the main branch will automatically trigger a deployment.
 
+## Home Page
+<img width="1918" height="897" alt="image" src="https://github.com/user-attachments/assets/01b74680-227a-48ee-b55c-8cd5bee75e97" />
+
 ## License
 This project is licensed under the MIT License.
 
