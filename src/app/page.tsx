@@ -8,10 +8,10 @@ import { MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-const Spline = dynamic(() =>
-  import("@splinetool/react-spline/viewer").then((mod) => ({ default: mod.Spline })),
-  { ssr: false }
-);
+const Spline = dynamic(() => import('@splinetool/react-spline').then(mod => mod.default), {
+  ssr: false,
+});
+
 
 
 
