@@ -9,9 +9,10 @@ import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
 const Spline = dynamic(() =>
-  import("@splinetool/react-spline").then((mod) => ({ default: mod.Spline })),
+  import("@splinetool/react-spline/dist/Spline").then((mod) => ({ default: mod.default })),
   { ssr: false }
 );
+
 
 
 
