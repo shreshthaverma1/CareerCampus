@@ -55,7 +55,7 @@
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.24.2",
   
-  "@splinetool/react-spline": "4.1.0"
+  "@splinetool/react-spline": "0.9.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -66,4 +66,6 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
+  
+
 }
