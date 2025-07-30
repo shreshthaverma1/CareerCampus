@@ -8,9 +8,11 @@ import { MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-const Spline = dynamic(() => import("@splinetool/react-spline").then(mod => ({ default: mod.Spline })), {
-  ssr: false,
-});
+const Spline = dynamic(() =>
+  import("@splinetool/react-spline").then((mod) => ({ default: mod.Spline })),
+  { ssr: false }
+);
+
 
 export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
