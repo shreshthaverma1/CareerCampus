@@ -9,13 +9,9 @@ import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
 const Spline = dynamic(() =>
-  import("@splinetool/react-spline/dist/Spline").then((mod) => ({ default: mod.default })),
+  import('@splinetool/react-spline').then((mod) => ({ default: mod.default })),
   { ssr: false }
 );
-
-
-
-
 
 export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
