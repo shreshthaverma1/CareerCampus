@@ -6,12 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
 });
-
 
 export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
@@ -21,23 +20,22 @@ export default function Home() {
     e.preventDefault();
     setIsExiting(true);
     setTimeout(() => {
-      router.push('/signup');
-    }, 1500); // Should match the fade-out animation duration
+      router.push("/signup");
+    }, 1500);
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8">
-      <div
-        className={cn(
-          "absolute inset-0 z-0 animate-fade-in-up",
-          { "animate-fade-out": isExiting }
-        )}
-      >
+    <main className="relative min-h-screen flex items-center justify-center overflow-hidden p-8">
+      {/* Background Layer */}
+      <div className="absolute inset-0 z-0">
         <Spline scene="https://prod.spline.design/bBuOujbqXB6e04L1/scene.splinecode" />
       </div>
+
+      {/* Foreground Content */}
       <div
         className={cn(
-          "flex flex-col items-center justify-center max-w-2xl text-center z-10 animate-fade-in-up",
+          "flex flex-col items-center justify-center max-w-2xl text-center z-10",
+          "animate-fade-in-up",
           { "animate-fade-out": isExiting }
         )}
       >
