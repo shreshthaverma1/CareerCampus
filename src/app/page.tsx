@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
 const Spline = dynamic(
   () =>
-    import('@splinetool/react-spline').then((mod) => ({
+    import("@splinetool/react-spline").then((mod) => ({
       default: mod.default ?? mod.Spline ?? mod,
     })),
   { ssr: false }
