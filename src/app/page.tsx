@@ -24,7 +24,8 @@ export default function Home() {
     <main className="relative min-h-screen flex items-center justify-center overflow-hidden p-8">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-    <Spline scene="prod.spline.design/bBuOujbqXB6e04L1/scene.splinecode" />
+   <Spline scene="https://prod.spline.design/NEW_PUBLIC_LINK/scene.splinecode" />
+
       </div>
 
       {/* Foreground Content */}
