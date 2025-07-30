@@ -6,15 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { MoveRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import dynamic from "next/dynamic";
-
-const Spline = dynamic(() => import('@splinetool/react-spline').then(mod => mod.default), {
-  ssr: false,
-});
-
-
-
-
+import Spline from "@splinetool/react-spline"; // ✅ simple import
 
 export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
@@ -30,10 +22,12 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen flex items-center justify-center overflow-hidden p-8">
+      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Spline scene="https://prod.spline.design/bBuOujbqXB6e04L1/scene.splinecode" />
       </div>
 
+      {/* Foreground Content */}
       <div
         className={cn(
           "flex flex-col items-center justify-center max-w-2xl text-center z-10",
